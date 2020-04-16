@@ -4,7 +4,15 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+    <ion-button class="ion-margin-bottom" (click)="enableLight()" color="light" expand="block">
+        <ion-icon slot="start" name="sunny-outline"></ion-icon>
+        Enable Light Mood
+    </ion-button>
+    <ion-button (click)="enableDark()" color="dark" expand="block">
+        <ion-icon slot="start" name="moon-outline"></ion-icon>
+        Enable Dark Mood
+    </ion-button>
     <ion-list class="ion-padding">
         <ion-item>
             <ion-label>Dark And Light Mood</ion-label>
