@@ -16,9 +16,11 @@ export class SettingsPage implements OnInit {
 
     enableDark() {
         this.themeService.enableDarkMood();
+        localStorage.setItem('light-mood', 'unActive');
     }
 
     enableLight() {
         this.themeService.enableLightMood();
+        localStorage.setItem('light-mood', 'active');
     }
 }
