@@ -4,16 +4,48 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <ion-list class="ion-padding">
-        <ion-item>
-            <ion-label>Create Tabs For Global Chart And Global Details</ion-label>
-        </ion-item>
-        <ion-item>
-            <ion-label> In GLobal Details Get Infected , Recovered & Deaths Counts & Date</ion-label>
-        </ion-item>
-        <ion-item>
-            <ion-label>In Global Charts Get Global & Deaths Infected Line Charts</ion-label>
-        </ion-item>
-    </ion-list>
+
+
+
+
+
+
+<ion-content >
+    <div class="ion-padding">
+        <ion-segment [(ngModel)]="segment" value="details">
+            <ion-segment-button value="details">
+                <ion-label>Details</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="charts">
+                <ion-label>Charts</ion-label>
+            </ion-segment-button>
+        </ion-segment>
+
+        <div [ngSwitch]="segment">
+            <div *ngSwitchCase="'details'">details</div>
+            <div *ngSwitchCase="'charts'">charts</div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <ion-list class="ion-padding">
+            <ion-item>
+                <ion-label>Create Tabs For Global Chart And Global Details</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label> In GLobal Details Get Infected , Recovered & Deaths Counts & Date</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label>In Global Charts Get Global & Deaths Infected Line Charts</ion-label>
+            </ion-item>
+        </ion-list>
+    </div>
+
 </ion-content>

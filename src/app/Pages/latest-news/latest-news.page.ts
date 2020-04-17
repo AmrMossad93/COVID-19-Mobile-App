@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-latest-news',
-  templateUrl: './latest-news.page.html',
-  styleUrls: ['./latest-news.page.scss'],
+    selector: 'app-latest-news',
+    templateUrl: './latest-news.page.html',
+    styleUrls: ['./latest-news.page.scss'],
 })
 export class LatestNewsPage implements OnInit {
+    segment: string = 'details';
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }
