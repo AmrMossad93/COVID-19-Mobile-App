@@ -18,35 +18,13 @@
     </div>
     <div [ngSwitch]="segment">
         <div *ngSwitchCase="'details'">
-            <app-card [tittle]="'Total Infected Cases'" [numberCases]="10000000000" [color]="'#17a2b8'"
+            <app-card [tittle]="'Total Infected Cases'" [numberCases]="data?.confirmed.value" [color]="'#17a2b8'"
                       [iconClass]="'checkmark-outline'"></app-card>
-            <app-card [tittle]="'Total Recovered Cases'" [numberCases]="1000000000000" [color]="'#28a745'"
+            <app-card [tittle]="'Total Recovered Cases'" [numberCases]="data?.recovered.value" [color]="'#28a745'"
                       [iconClass]="'medkit-outline'"></app-card>
-            <app-card [tittle]="'Total Deaths Cases'" [numberCases]="10000000000" [color]="'#dc3545'"
+            <app-card [tittle]="'Total Deaths Cases'" [numberCases]="data?.deaths.value" [color]="'#dc3545'"
                       [iconClass]="'skull-outline'"></app-card>
         </div>
         <div *ngSwitchCase="'charts'">charts</div>
     </div>
-
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <ion-list class="ion-padding">
-        <ion-item>
-            <ion-label>Create Tabs For Global Chart And Global Details</ion-label>
-        </ion-item>
-        <ion-item>
-            <ion-label> In GLobal Details Get Infected , Recovered & Deaths Counts & Date</ion-label>
-        </ion-item>
-        <ion-item>
-            <ion-label>In Global Charts Get Global & Deaths Infected Line Charts</ion-label>
-        </ion-item>
-    </ion-list>
 </ion-content>

@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiEndPoint: 'https://covid19.mathdro.id/'
 };
