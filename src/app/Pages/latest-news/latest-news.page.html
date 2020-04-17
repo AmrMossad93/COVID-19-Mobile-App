@@ -26,6 +26,10 @@
             <app-card [tittle]="'Total Deaths Cases'" [numberCases]="data?.deaths.value" [color]="'#dc3545'"
                       [iconClass]="'skull-outline'"></app-card>
         </div>
-        <div *ngSwitchCase="'charts'">charts</div>
+        <div *ngSwitchCase="'charts'">
+            <ion-card color="light" class="ion-padding">
+                <p-chart type="line" [data]="chartData"></p-chart>
+            </ion-card>
+        </div>
     </div>
 </ion-content>
