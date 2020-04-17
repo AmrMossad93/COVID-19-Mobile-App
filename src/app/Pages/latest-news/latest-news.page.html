@@ -17,29 +17,13 @@
         </ion-segment>
     </div>
     <div [ngSwitch]="segment">
-        <div *ngSwitchCase="'details'">details
-
-            <ion-grid>
-                <ion-row>
-                    <ion-col size="12">
-                        <app-card></app-card>
-                    </ion-col>
-                    <ion-col size="6">
-                        <app-card></app-card>
-                    </ion-col>
-                    <ion-col size="6">
-                        <app-card></app-card>
-                    </ion-col>
-                    <ion-col size="6">
-                        <app-card></app-card>
-                    </ion-col>
-                    <ion-col size="6">
-                        <app-card></app-card>
-                    </ion-col>
-                </ion-row>
-            </ion-grid>
-
-
+        <div *ngSwitchCase="'details'">
+            <app-card [tittle]="'Total Infected Cases'" [numberCases]="10000000000" [color]="'#17a2b8'"
+                      [iconClass]="'checkmark-outline'"></app-card>
+            <app-card [tittle]="'Total Recovered Cases'" [numberCases]="1000000000000" [color]="'#28a745'"
+                      [iconClass]="'medkit-outline'"></app-card>
+            <app-card [tittle]="'Total Deaths Cases'" [numberCases]="10000000000" [color]="'#dc3545'"
+                      [iconClass]="'skull-outline'"></app-card>
         </div>
         <div *ngSwitchCase="'charts'">charts</div>
     </div>
