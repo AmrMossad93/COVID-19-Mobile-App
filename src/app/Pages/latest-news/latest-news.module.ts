@@ -8,12 +8,14 @@ import { LatestNewsPageRoutingModule } from './latest-news-routing.module';
 
 import { LatestNewsPage } from './latest-news.page';
 import {SharedModule} from '../../Modules/shared.module';
+import {PrimeNgModule} from '../../Modules/prime-ng.module';
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
         IonicModule,
+        PrimeNgModule,
         LatestNewsPageRoutingModule,
         SharedModule
     ],
