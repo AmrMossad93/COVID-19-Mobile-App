@@ -5,12 +5,7 @@
 </ion-header>
 
 
-
-
-
-
-
-<ion-content >
+<ion-content fullscreen>
     <div class="ion-padding">
         <ion-segment [(ngModel)]="segment" value="details">
             <ion-segment-button value="details">
@@ -20,32 +15,54 @@
                 <ion-label>Charts</ion-label>
             </ion-segment-button>
         </ion-segment>
+    </div>
+    <div [ngSwitch]="segment">
+        <div *ngSwitchCase="'details'">details
 
-        <div [ngSwitch]="segment">
-            <div *ngSwitchCase="'details'">details</div>
-            <div *ngSwitchCase="'charts'">charts</div>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="12">
+                        <app-card></app-card>
+                    </ion-col>
+                    <ion-col size="6">
+                        <app-card></app-card>
+                    </ion-col>
+                    <ion-col size="6">
+                        <app-card></app-card>
+                    </ion-col>
+                    <ion-col size="6">
+                        <app-card></app-card>
+                    </ion-col>
+                    <ion-col size="6">
+                        <app-card></app-card>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+
         </div>
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <ion-list class="ion-padding">
-            <ion-item>
-                <ion-label>Create Tabs For Global Chart And Global Details</ion-label>
-            </ion-item>
-            <ion-item>
-                <ion-label> In GLobal Details Get Infected , Recovered & Deaths Counts & Date</ion-label>
-            </ion-item>
-            <ion-item>
-                <ion-label>In Global Charts Get Global & Deaths Infected Line Charts</ion-label>
-            </ion-item>
-        </ion-list>
+        <div *ngSwitchCase="'charts'">charts</div>
     </div>
 
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <ion-list class="ion-padding">
+        <ion-item>
+            <ion-label>Create Tabs For Global Chart And Global Details</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label> In GLobal Details Get Infected , Recovered & Deaths Counts & Date</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>In Global Charts Get Global & Deaths Infected Line Charts</ion-label>
+        </ion-item>
+    </ion-list>
 </ion-content>

@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { LatestNewsPageRoutingModule } from './latest-news-routing.module';
 
 import { LatestNewsPage } from './latest-news.page';
+import {SharedModule} from '../../Modules/shared.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    LatestNewsPageRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        LatestNewsPageRoutingModule,
+        SharedModule
+    ],
   declarations: [LatestNewsPage]
 })
 export class LatestNewsPageModule {}

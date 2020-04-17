@@ -65,14 +65,15 @@
         --color-selected: #6E2672
       }
     }
-    ion-segment-button{
-      --indicator-color: #f4f4f4;
-      --background: #F59320;
+
+    ion-segment-button {
+      --indicator-color: #F59320;
+      --background: #f4f4f4;
       --color: #6E2672;
     }
 
-
-
-
+    ion-card {
+      --background: #F59320;
+    }
   }
 }
