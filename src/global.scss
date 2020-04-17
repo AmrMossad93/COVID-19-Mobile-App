@@ -72,8 +72,11 @@
       --color: #6E2672;
     }
 
-    //ion-card {
-    //  --background: #F59320;
-    //}
+    ion-card {
+      --background: #F59320;
+      ion-card-title{
+        --color: #6E2672;
+      }
+    }
   }
 }
