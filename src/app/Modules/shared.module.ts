@@ -4,6 +4,7 @@ import {CardComponent} from '../Widgets/card/card.component';
 import {IonicModule} from '@ionic/angular';
 import {CountUpModule} from 'ngx-countup';
 import {HttpClientModule} from '@angular/common/http';
+import {PrimeNgModule} from './prime-ng.module';
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import {HttpClientModule} from '@angular/common/http';
     imports: [
         CommonModule,
         CountUpModule,
+        PrimeNgModule,
         HttpClientModule,
         IonicModule
     ],
