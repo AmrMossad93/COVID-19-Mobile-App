@@ -12,8 +12,8 @@
             <ion-segment-button value="details">
                 <ion-label>Details</ion-label>
             </ion-segment-button>
-            <ion-segment-button value="charts">
-                <ion-label>Charts</ion-label>
+            <ion-segment-button value="stat">
+                <ion-label>Statistics</ion-label>
             </ion-segment-button>
         </ion-segment>
     </div>
@@ -26,8 +26,10 @@
             <app-card [tittle]="'Total Deaths Cases'" [numberCases]="data?.deaths.value" [color]="'#dc3545'"
                       [iconClass]="'skull-outline'"></app-card>
         </div>
-        <div *ngSwitchCase="'charts'">
-            <ion-card color="light" class="ion-padding">
+        <div *ngSwitchCase="'stat'">
+            <ion-card class="ion-padding">
+                <ion-card-title>Total COVID-19 Cases</ion-card-title>
+                <br>
                 <p-chart type="line" [data]="chartData"></p-chart>
             </ion-card>
         </div>

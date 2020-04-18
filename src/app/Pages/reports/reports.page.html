@@ -5,15 +5,36 @@
 </ion-header>
 
 <ion-content>
-    <ion-list class="ion-padding">
-        <ion-item>
-            <ion-label>Create Tabs For Country Chart And Country Details </ion-label>
-        </ion-item>
-        <ion-item>
-            <ion-label> In Country Details Get Infected , Recovered & Deaths Counts & Date</ion-label>
-        </ion-item>
-        <ion-item>
-            <ion-label>In Country Charts Get Infected & Recovered, Deaths Infected PI Charts</ion-label>
-        </ion-item>
+    <ion-list>
+        <div class="ion-padding">
+            <ion-item>
+                <ion-label>Country</ion-label>
+                <ion-select [value]="myCountry" [(ngModel)]="myCountry" placeholder="Choose"
+                            (ngModelChange)="getCoronaDetailsByCountry()" okText="Okay" cancelText="Dismiss">
+                    <ion-select-option disabled value="choose">Choose</ion-select-option>
+                    <ion-select-option *ngFor="let x of countryList" [value]="x">{{x}}</ion-select-option>
+                </ion-select>
+            </ion-item>
+        </div>
+        <br>
     </ion-list>
+    <app-card [tittle]="'Total Infected Cases'" [numberCases]="data?.confirmed.value" [color]="'#17a2b8'"
+              [iconClass]="'checkmark-outline'"></app-card>
+    <app-card [tittle]="'Total Recovered Cases'" [numberCases]="data?.recovered.value" [color]="'#28a745'"
+              [iconClass]="'medkit-outline'"></app-card>
+    <app-card [tittle]="'Total Deaths Cases'" [numberCases]="data?.deaths.value" [color]="'#dc3545'"
+              [iconClass]="'skull-outline'"></app-card>
+    <p-chart type="pie" [data]="chartData"></p-chart>
+    <br>
+    <!--    <ion-list class="ion-padding">-->
+    <!--        <ion-item>-->
+    <!--            <ion-label>Create Tabs For Country Chart And Country Details</ion-label>-->
+    <!--        </ion-item>-->
+    <!--        <ion-item>-->
+    <!--            <ion-label> In Country Details Get Infected , Recovered & Deaths Counts & Date</ion-label>-->
+    <!--        </ion-item>-->
+    <!--        <ion-item>-->
+    <!--            <ion-label>In Country Charts Get Infected & Recovered, Deaths Infected PI Charts</ion-label>-->
+    <!--        </ion-item>-->
+    <!--    </ion-list>-->
 </ion-content>
